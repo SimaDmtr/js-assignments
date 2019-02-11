@@ -199,11 +199,9 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  var hor = '─';
-  var preRow = hor.repeat(width);
-  var row = '┌'+preRow.slice(1, -1)+'┐\n'
-  var preRect = row.repeat(height);
-  console.log(preRect);
+  return'┌' + '─'.repeat(width-2) + '┐' + '\n'
+    + ('│' + ' '.repeat(width-2) + '│' + '\n').repeat(height-2)
+    + '└' + '─'.repeat(width-2) + '┘' + '\n';
 }
 
 
