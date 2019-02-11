@@ -142,7 +142,7 @@ function removeFirstOccurrences(str, value)  {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-  throw new Error('Not implemented');
+  return str.substring(1, str.length-1);
 }
 
 
@@ -157,7 +157,7 @@ function unbracketTag(str) {
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
 function convertToUpperCase(str) {
-  throw new Error('Not implemented');
+  return str.toUpperCase();
 }
 
 /**
@@ -172,7 +172,7 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-  throw new Error('Not implemented');
+  return str.split(';');
 }
 
 /**
@@ -199,7 +199,11 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  throw new Error('Not implemented');
+  var hor = '─';
+  var preRow = hor.repeat(width);
+  var row = '┌'+preRow.slice(1, -1)+'┐\n'
+  var preRect = row.repeat(height);
+  console.log(preRect);
 }
 
 
